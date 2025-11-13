@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Mehwish 💗</title>
+    <title>For Hanifa 💗</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,35 +55,35 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
-    
+
         const btn = document.getElementById("loveBtn");
         const envelope = document.getElementById("envelope");
         const envelopeBox = envelope.querySelector(".envelope");
-    
+
         btn.addEventListener("click", () => {
-        
+
             // If envelope is hidden → show it
             if (envelope.style.display === "none" || envelope.style.display === "") {
                 envelope.style.display = "flex";
-            
+
                 setTimeout(() => {
                     envelopeBox.classList.add("open");
                 }, 100);
-            
+
             } else {
                 // If envelope is visible → close animation & hide
                 envelopeBox.classList.remove("open");
-            
+
                 setTimeout(() => {
                     envelope.style.display = "none";
                 }, 500); // give time for the flap to close smoothly
             }
-        
+
         });
-    
+
     });
     </script>
-    
+
 
 
 
