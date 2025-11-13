@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap');
+
+body {
+    margin: 0;
+    background: #ffeef3;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Romantic Floating Hearts */
+.hearts::before,
+.hearts::after {
+    content: "💗";
+    font-size: 40px;
+    position: absolute;
+    animation: float 5s infinite ease-in-out;
+    opacity: 0.8;
+}
+.hearts::before {
+    top: 20%;
+    left: 10%;
+}
+.hearts::after {
+    top: 60%;
+    right: 10%;
+}
+@keyframes float {
+    0% { transform: translateY(20px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(20px); }
+}
+
+/* Photo Card */
+.photo-card {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 230px;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(255, 150, 170, 0.3);
+}
+.photo-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Title */
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #ff6f9f;
+    margin-top: 25px;
+}
+
+/* Message */
+.message {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+}
+.highlight {
+    color: #ff3e7f;
+    font-weight: 600;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #ff6f9f;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(255, 120, 150, 0.4);
+}
+.btn:hover {
+    background: #ff3e7f;
+    transform: scale(1.07);
+}
+
+
+
+
+img {
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(255, 120, 150, 0.4),
+                0 0 60px rgba(255, 150, 170, 0.2);
+}
+
+
+/* Envelope container */
+.envelope-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Envelope */
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 130px;
+    background: #ffb6c9;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(255, 120, 150, 0.4);
+}
+
+/* Envelope flap */
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    background: #ff8fb3;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: 0.6s ease-in-out;
+}
+
+.envelope .letter {
+    position: absolute;
+    width: 85%;
+    height: 70%;
+    top: 20%;
+    left: 7.5%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #ff4d81;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+
+    /* ✨ Romantic Background ✨ */
+    background: linear-gradient(135deg, #ffe2eb, #ffd3e3);
+    background-size: cover;
+
+    /* Soft hearts pattern */
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 160, 190, 0.35) 8px, transparent 0),
+        radial-gradient(circle at 80% 70%, rgba(255, 180, 200, 0.35) 10px, transparent 0);
+
+    /* Soft glowing frame */
+    box-shadow: inset 0 0 15px rgba(255, 100, 150, 0.25),
+                0 4px 15px rgba(255, 120, 150, 0.3);
+}
+
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
